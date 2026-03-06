@@ -1,0 +1,12 @@
+tab:
+  enabled: true
+  update-interval-ticks: 40
+  permission: ""
+  disabled-worlds: []
+  header:
+    - "&6&lRaikouHUD"
+    - "&7Online: &f%server_online%"
+  footer:
+    - "&7TPS: &f%server_tps_1m%"
+    - "&7Enjoy your game!"
+

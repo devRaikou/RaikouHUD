@@ -1,0 +1,13 @@
+scoreboard:
+  enabled: true
+  update-interval-ticks: 20
+  takeover-mode: SOFT
+  permission: ""
+  disabled-worlds: []
+  title: "&b&lRaikouHUD"
+  lines:
+    - "&7Player: &f%player_name%"
+    - "&7Ping: &a%player_ping%ms"
+    - "&7World: &b%player_world%"
+    - "&7Online: &e%server_online%"
+

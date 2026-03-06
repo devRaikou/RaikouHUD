@@ -1,0 +1,7 @@
+actionbar:
+  enabled: true
+  update-interval-ticks: 20
+  permission: ""
+  disabled-worlds: []
+  message: "&ePing &f%player_ping%ms &7| &eX:&f%player_x% &eY:&f%player_y% &eZ:&f%player_z%"
+

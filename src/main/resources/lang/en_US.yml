@@ -1,0 +1,38 @@
+prefix: "&8[&bRaikouHUD&8] &7"
+
+command:
+  no-permission: "&cYou do not have permission to use this command."
+  player-only: "&cThis command can only be used by players."
+  player-not-found: "&cPlayer not found: &f{player}"
+  unknown-subcommand: "&cUnknown subcommand. Use &f/raikouhud help&c."
+  help:
+    header: "&b&lRaikouHUD Commands"
+    line-help: "&7- &f/raikouhud help &8| &7Show this list"
+    line-reload: "&7- &f/raikouhud reload &8| &7Reload config and language files"
+    line-status: "&7- &f/raikouhud status [player] &8| &7Show module status"
+    line-toggle: "&7- &f/raikouhud toggle <module> [player] &8| &7Toggle module for player"
+    line-version: "&7- &f/raikouhud version &8| &7Show plugin version"
+  reload:
+    success: "&aConfiguration and modules reloaded successfully."
+    failed: "&cReload failed. Check console logs."
+  status:
+    header: "&bStatus &8| &7Locale: &f{locale}"
+    module-line: "&7- {module}: {state}"
+    player-line: "&8  -> &f{player} &8/ &7{module}: {state}"
+  toggle:
+    usage: "&cUsage: &f/raikouhud toggle <scoreboard|bossbar|actionbar|tab> [player]"
+    unknown-module: "&cUnknown module: &f{module}"
+    target-required: "&cConsole must specify a target player."
+    success: "&a{module} for &f{player} &ais now {state}&a."
+  version: "&7Running &bRaikouHUD &fv{version}"
+
+state:
+  enabled: "&aenabled"
+  disabled: "&cdisabled"
+
+module:
+  scoreboard: "Scoreboard"
+  bossbar: "BossBar"
+  actionbar: "ActionBar"
+  tab: "TAB"
+

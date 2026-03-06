@@ -1,0 +1,20 @@
+plugin:
+  debug: false
+
+locale:
+  default: en_US
+  fallback: en_US
+
+integrations:
+  placeholderapi: true
+
+modules:
+  scoreboard: true
+  bossbar: true
+  actionbar: true
+  tab: true
+
+performance:
+  min-update-interval-ticks: 10
+  join-init-delay-ticks: 1
+

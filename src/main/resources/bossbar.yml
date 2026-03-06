@@ -1,0 +1,13 @@
+bossbar:
+  enabled: true
+  update-interval-ticks: 20
+  permission: ""
+  disabled-worlds: []
+  color: BLUE
+  style: SEGMENTED_10
+  title: "&b%player_name% &7| &f%server_tps_1m% TPS"
+  progress:
+    mode: STATIC
+    static-value: 1.0
+    placeholder: "%player_health_ratio%"
+

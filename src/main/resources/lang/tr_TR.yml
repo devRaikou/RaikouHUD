@@ -1,0 +1,38 @@
+prefix: "&8[&bRaikouHUD&8] &7"
+
+command:
+  no-permission: "&cBu komutu kullanma yetkin yok."
+  player-only: "&cBu komut sadece oyuncular tarafından kullanılabilir."
+  player-not-found: "&cOyuncu bulunamadı: &f{player}"
+  unknown-subcommand: "&cBilinmeyen alt komut. &f/raikouhud help &ckullan."
+  help:
+    header: "&b&lRaikouHUD Komutları"
+    line-help: "&7- &f/raikouhud help &8| &7Bu listeyi gösterir"
+    line-reload: "&7- &f/raikouhud reload &8| &7Config ve dil dosyalarını yeniler"
+    line-status: "&7- &f/raikouhud status [oyuncu] &8| &7Modül durumlarını gösterir"
+    line-toggle: "&7- &f/raikouhud toggle <module> [oyuncu] &8| &7Oyuncu modülünü aç/kapat"
+    line-version: "&7- &f/raikouhud version &8| &7Plugin sürümünü gösterir"
+  reload:
+    success: "&aYapılandırma ve modüller başarıyla yenilendi."
+    failed: "&cYenileme başarısız. Konsol loglarını kontrol et."
+  status:
+    header: "&bDurum &8| &7Dil: &f{locale}"
+    module-line: "&7- {module}: {state}"
+    player-line: "&8  -> &f{player} &8/ &7{module}: {state}"
+  toggle:
+    usage: "&cKullanım: &f/raikouhud toggle <scoreboard|bossbar|actionbar|tab> [oyuncu]"
+    unknown-module: "&cBilinmeyen modül: &f{module}"
+    target-required: "&cKonsol için hedef oyuncu zorunlu."
+    success: "&f{player} &aiçin {module} durumu: {state}&a."
+  version: "&7Çalışan sürüm: &bRaikouHUD &fv{version}"
+
+state:
+  enabled: "&aaçık"
+  disabled: "&ckapalı"
+
+module:
+  scoreboard: "Scoreboard"
+  bossbar: "BossBar"
+  actionbar: "ActionBar"
+  tab: "TAB"
+

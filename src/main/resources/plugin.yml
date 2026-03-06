@@ -1,0 +1,40 @@
+name: RaikouHUD
+version: ${version}
+main: dev.raikou.raikouhud.RaikouHUDPlugin
+api-version: "1.21"
+authors:
+  - Raikou
+description: Modern, configurable HUD plugin for Paper/Spigot 1.21+
+softdepend:
+  - PlaceholderAPI
+
+commands:
+  raikouhud:
+    description: Main command for RaikouHUD
+    usage: /raikouhud <help|reload|status|toggle|version>
+    aliases: [rhd]
+    permission: raikouhud.command.use
+
+permissions:
+  raikouhud.command.use:
+    default: true
+  raikouhud.command.reload:
+    default: op
+  raikouhud.command.status:
+    default: true
+  raikouhud.command.status.others:
+    default: op
+  raikouhud.command.toggle:
+    default: true
+  raikouhud.command.toggle.others:
+    default: op
+  raikouhud.admin:
+    default: op
+    children:
+      raikouhud.command.use: true
+      raikouhud.command.reload: true
+      raikouhud.command.status: true
+      raikouhud.command.status.others: true
+      raikouhud.command.toggle: true
+      raikouhud.command.toggle.others: true
+
