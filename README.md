@@ -13,6 +13,7 @@ RaikouHUD provides four modular HUD layers with clean defaults and reload-safe b
 ## Table of Contents
 - [Overview](#overview)
 - [Core Features](#core-features)
+- [Screenshots](#screenshots)
 - [Architecture Highlights](#architecture-highlights)
 - [Requirements](#requirements)
 - [Quick Start](#quick-start)
@@ -45,6 +46,21 @@ It focuses on:
 - Bilingual language packs (`en_US`, `tr_TR`) with extensible key-based i18n.
 - Placeholder pipeline with built-in placeholders and optional PlaceholderAPI support.
 - Central update coordinator to avoid per-player task spam.
+
+---
+
+## Screenshots
+### Scoreboard
+![RaikouHUD Scoreboard](images/scoreboard.png)
+
+### BossBar
+![RaikouHUD BossBar](images/bossbar.png)
+
+### ActionBar
+![RaikouHUD ActionBar](images/actionbar.png)
+
+### TAB
+![RaikouHUD TAB](images/tab.png)
 
 ---
 
