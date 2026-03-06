@@ -43,6 +43,14 @@ It provides:
 - `tab.yml`: tab header/footer and update settings.
 - `lang/en_US.yml`, `lang/tr_TR.yml`: localized command and plugin messages.
 
+## Formatting
+RaikouHUD uses **MiniMessage** formatting in all message and HUD config values.
+
+Examples:
+- `<aqua><bold>RaikouHUD</bold></aqua>`
+- `<gray>Online: <white>%server_online%</white></gray>`
+- `<gradient:#58D6FF:#2F80ED>Title</gradient>`
+
 ## Placeholder Support
 Built-in placeholders include:
 - `%player_name%`

@@ -1,38 +1,37 @@
-prefix: "&8[&bRaikouHUD&8] &7"
+﻿prefix: "<dark_gray>[<red>RaikouHUD</red>]</dark_gray> <gray>"
 
 command:
-  no-permission: "&cYou do not have permission to use this command."
-  player-only: "&cThis command can only be used by players."
-  player-not-found: "&cPlayer not found: &f{player}"
-  unknown-subcommand: "&cUnknown subcommand. Use &f/raikouhud help&c."
+  no-permission: "<#ff4d4d>You do not have permission.</#ff4d4d>"
+  player-only: "<#ff4d4d>This command is player-only.</#ff4d4d>"
+  player-not-found: "<#ff4d4d>Player not found: <white>{player}</white></#ff4d4d>"
+  unknown-subcommand: "<#ff4d4d>Unknown subcommand. <gray>Use <white>/raikouhud help</white></gray>"
   help:
-    header: "&b&lRaikouHUD Commands"
-    line-help: "&7- &f/raikouhud help &8| &7Show this list"
-    line-reload: "&7- &f/raikouhud reload &8| &7Reload config and language files"
-    line-status: "&7- &f/raikouhud status [player] &8| &7Show module status"
-    line-toggle: "&7- &f/raikouhud toggle <module> [player] &8| &7Toggle module for player"
-    line-version: "&7- &f/raikouhud version &8| &7Show plugin version"
+    header: "<red><bold>RaikouHUD</bold></red> <gray>Commands</gray>"
+    line-help: "<gray>- <white>/raikouhud help</white> <dark_gray>|</dark_gray> show commands</gray>"
+    line-reload: "<gray>- <white>/raikouhud reload</white> <dark_gray>|</dark_gray> reload config and language</gray>"
+    line-status: "<gray>- <white>/raikouhud status [player]</white> <dark_gray>|</dark_gray> show module states</gray>"
+    line-toggle: "<gray>- <white>/raikouhud toggle <module> [player]</white> <dark_gray>|</dark_gray> toggle player module</gray>"
+    line-version: "<gray>- <white>/raikouhud version</white> <dark_gray>|</dark_gray> show plugin version</gray>"
   reload:
-    success: "&aConfiguration and modules reloaded successfully."
-    failed: "&cReload failed. Check console logs."
+    success: "<#ff6b6b>Reload complete.</#ff6b6b>"
+    failed: "<#ff4d4d>Reload failed. Check console.</#ff4d4d>"
   status:
-    header: "&bStatus &8| &7Locale: &f{locale}"
-    module-line: "&7- {module}: {state}"
-    player-line: "&8  -> &f{player} &8/ &7{module}: {state}"
+    header: "<red>Status</red> <dark_gray>|</dark_gray> <gray>Locale <white>{locale}</white></gray>"
+    module-line: "<gray>- {module}: {state}</gray>"
+    player-line: "<dark_gray>  > </dark_gray><white>{player}</white> <dark_gray>|</dark_gray> <gray>{module}: {state}</gray>"
   toggle:
-    usage: "&cUsage: &f/raikouhud toggle <scoreboard|bossbar|actionbar|tab> [player]"
-    unknown-module: "&cUnknown module: &f{module}"
-    target-required: "&cConsole must specify a target player."
-    success: "&a{module} for &f{player} &ais now {state}&a."
-  version: "&7Running &bRaikouHUD &fv{version}"
+    usage: "<#ff4d4d>Usage: <white>/raikouhud toggle <scoreboard|bossbar|actionbar|tab> [player]</white>"
+    unknown-module: "<#ff4d4d>Unknown module: <white>{module}</white>"
+    target-required: "<#ff4d4d>Console must specify a target player."
+    success: "<#ff6b6b>{module}</#ff6b6b><gray> for </gray><white>{player}</white><gray> is now </gray>{state}<gray>.</gray>"
+  version: "<gray>RaikouHUD <white>v{version}</white></gray>"
 
 state:
-  enabled: "&aenabled"
-  disabled: "&cdisabled"
+  enabled: "<#ff8a8a>enabled</#ff8a8a>"
+  disabled: "<#c63f3f>disabled</#c63f3f>"
 
 module:
   scoreboard: "Scoreboard"
   bossbar: "BossBar"
   actionbar: "ActionBar"
   tab: "TAB"
-

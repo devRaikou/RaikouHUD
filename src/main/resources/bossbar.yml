@@ -5,9 +5,8 @@ bossbar:
   disabled-worlds: []
   color: BLUE
   style: SEGMENTED_10
-  title: "&b%player_name% &7| &f%server_tps_1m% TPS"
+  title: "<aqua>%player_name%</aqua> <gray>|</gray> <white>%server_tps_1m% TPS</white>"
   progress:
     mode: STATIC
     static-value: 1.0
     placeholder: "%player_health_ratio%"
-

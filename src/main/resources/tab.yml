@@ -4,9 +4,8 @@ tab:
   permission: ""
   disabled-worlds: []
   header:
-    - "&6&lRaikouHUD"
-    - "&7Online: &f%server_online%"
+    - "<gold><bold>RaikouHUD</bold></gold>"
+    - "<gray>Online: <white>%server_online%</white></gray>"
   footer:
-    - "&7TPS: &f%server_tps_1m%"
-    - "&7Enjoy your game!"
-
+    - "<gray>TPS: <white>%server_tps_1m%</white></gray>"
+    - "<gray>Enjoy your game!</gray>"

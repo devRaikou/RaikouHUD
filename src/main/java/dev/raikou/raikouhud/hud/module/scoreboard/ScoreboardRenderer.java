@@ -2,11 +2,11 @@ package dev.raikou.raikouhud.hud.module.scoreboard;
 
 import dev.raikou.raikouhud.config.model.module.ScoreboardTakeoverMode;
 import dev.raikou.raikouhud.player.PlayerSession;
+import dev.raikou.raikouhud.util.MiniMessageSupport;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.DisplaySlot;
@@ -17,6 +17,7 @@ import org.bukkit.scoreboard.ScoreboardManager;
 public final class ScoreboardRenderer {
 
     private static final String OBJECTIVE_NAME = "raikouhud";
+    private static final String LEGACY_RESET = "\u00A7r";
     private static final String META_BOARD = "scoreboard.board";
     private static final String META_HASH = "scoreboard.hash";
     private static final String META_ENTRIES = "scoreboard.entries";
@@ -123,7 +124,7 @@ public final class ScoreboardRenderer {
             String line = trim(colorize(lines.get(index)), 40);
             String unique = line;
             while (used.contains(unique)) {
-                unique = trim(unique + ChatColor.RESET, 40);
+                unique = trim(unique + LEGACY_RESET, 40);
             }
             used.add(unique);
             output.add(unique);
@@ -131,8 +132,8 @@ public final class ScoreboardRenderer {
         return output;
     }
 
-    private String colorize(String value) {
-        return ChatColor.translateAlternateColorCodes('&', value == null ? "" : value);
+    private String colorize(String miniMessageText) {
+        return MiniMessageSupport.toLegacySection(miniMessageText);
     }
 
     private String trim(String value, int max) {

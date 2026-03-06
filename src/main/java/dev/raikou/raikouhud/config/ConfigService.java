@@ -108,14 +108,14 @@ public final class ConfigService {
             logger,
             "scoreboard.takeover-mode"
         );
-        String title = config.getString("scoreboard.title", "&b&lRaikouHUD");
+        String title = config.getString("scoreboard.title", "<aqua><bold>RaikouHUD</bold></aqua>");
         List<String> lines = config.getStringList("scoreboard.lines");
         if (lines.isEmpty()) {
             lines = List.of(
-                "&7Player: &f%player_name%",
-                "&7Ping: &a%player_ping%ms",
-                "&7World: &b%player_world%",
-                "&7Online: &e%server_online%"
+                "<gray>Player: <white>%player_name%</white></gray>",
+                "<gray>Ping: <green>%player_ping%ms</green></gray>",
+                "<gray>World: <aqua>%player_world%</aqua></gray>",
+                "<gray>Online: <yellow>%server_online%</yellow></gray>"
             );
         }
         return new ScoreboardConfig(moduleConfig, takeoverMode, title, List.copyOf(lines));
@@ -150,7 +150,7 @@ public final class ConfigService {
             logger,
             "bossbar.progress.static-value"
         );
-        String title = config.getString("bossbar.title", "&b%player_name% &7| &f%server_online% online");
+        String title = config.getString("bossbar.title", "<aqua>%player_name%</aqua> <gray>|</gray> <white>%server_online% online</white>");
         String progressPlaceholder = config.getString("bossbar.progress.placeholder", "%player_health_ratio%");
         return new BossbarConfig(moduleConfig, color, style, title, progressMode, staticProgress, progressPlaceholder);
     }
@@ -160,7 +160,10 @@ public final class ConfigService {
         moduleConfig = ConfigValidator.sanitizeModuleConfig(moduleConfig, minInterval, logger, "actionbar.yml");
         String message = config.getString(
             "actionbar.message",
-            "&ePing &f%player_ping%ms &7| &eX:&f%player_x% &eY:&f%player_y% &eZ:&f%player_z%"
+            "<yellow>Ping</yellow> <white>%player_ping%ms</white> <gray>|</gray> " +
+                "<yellow>X:</yellow><white>%player_x%</white> " +
+                "<yellow>Y:</yellow><white>%player_y%</white> " +
+                "<yellow>Z:</yellow><white>%player_z%</white>"
         );
         return new ActionbarConfig(moduleConfig, message);
     }
@@ -170,11 +173,11 @@ public final class ConfigService {
         moduleConfig = ConfigValidator.sanitizeModuleConfig(moduleConfig, minInterval, logger, "tab.yml");
         List<String> header = config.getStringList("tab.header");
         if (header.isEmpty()) {
-            header = List.of("&6&lRaikouHUD", "&7Online: &f%server_online%");
+            header = List.of("<gold><bold>RaikouHUD</bold></gold>", "<gray>Online: <white>%server_online%</white></gray>");
         }
         List<String> footer = config.getStringList("tab.footer");
         if (footer.isEmpty()) {
-            footer = List.of("&7TPS: &f%server_tps_1m%", "&7Enjoy your game!");
+            footer = List.of("<gray>TPS: <white>%server_tps_1m%</white></gray>", "<gray>Enjoy your game!</gray>");
         }
         return new TabConfig(moduleConfig, List.copyOf(header), List.copyOf(footer));
     }

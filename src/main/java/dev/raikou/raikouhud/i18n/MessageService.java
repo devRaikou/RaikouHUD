@@ -1,9 +1,9 @@
 package dev.raikou.raikouhud.i18n;
 
+import dev.raikou.raikouhud.util.MiniMessageSupport;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Objects;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.command.CommandSender;
 
 public final class MessageService {
@@ -15,12 +15,12 @@ public final class MessageService {
     }
 
     public String render(MessageKey key) {
-        return colorize(localeService.message(key.path()));
+        return Objects.requireNonNullElse(localeService.message(key.path()), "");
     }
 
     public String render(MessageKey key, Map<String, String> placeholders) {
         String template = localeService.message(key.path());
-        return colorize(applyPlaceholders(template, placeholders));
+        return applyPlaceholders(template, placeholders);
     }
 
     public void send(CommandSender sender, MessageKey key) {
@@ -28,17 +28,16 @@ public final class MessageService {
     }
 
     public void send(CommandSender sender, MessageKey key, Map<String, String> placeholders) {
-        String prefix = render(MessageKey.PREFIX);
-        String message = render(key, placeholders);
-        sender.sendMessage(prefix + message);
+        String full = render(MessageKey.PREFIX) + render(key, placeholders);
+        sender.sendMessage(MiniMessageSupport.toLegacySection(full));
     }
 
     public void sendRaw(CommandSender sender, MessageKey key) {
-        sender.sendMessage(render(key));
+        sender.sendMessage(MiniMessageSupport.toLegacySection(render(key)));
     }
 
     public void sendRaw(CommandSender sender, MessageKey key, Map<String, String> placeholders) {
-        sender.sendMessage(render(key, placeholders));
+        sender.sendMessage(MiniMessageSupport.toLegacySection(render(key, placeholders)));
     }
 
     public String activeLocaleCode() {
@@ -52,9 +51,4 @@ public final class MessageService {
         }
         return output;
     }
-
-    private String colorize(String input) {
-        return ChatColor.translateAlternateColorCodes('&', Objects.requireNonNullElse(input, ""));
-    }
 }
-

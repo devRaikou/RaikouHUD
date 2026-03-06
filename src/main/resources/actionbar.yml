@@ -3,5 +3,4 @@ actionbar:
   update-interval-ticks: 20
   permission: ""
   disabled-worlds: []
-  message: "&ePing &f%player_ping%ms &7| &eX:&f%player_x% &eY:&f%player_y% &eZ:&f%player_z%"
-
+  message: "<yellow>Ping</yellow> <white>%player_ping%ms</white> <gray>|</gray> <yellow>X:</yellow><white>%player_x%</white> <yellow>Y:</yellow><white>%player_y%</white> <yellow>Z:</yellow><white>%player_z%</white>"

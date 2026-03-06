@@ -1,38 +1,37 @@
-prefix: "&8[&bRaikouHUD&8] &7"
+﻿prefix: "<dark_gray>[<red>RaikouHUD</red>]</dark_gray> <gray>"
 
 command:
-  no-permission: "&cBu komutu kullanma yetkin yok."
-  player-only: "&cBu komut sadece oyuncular tarafından kullanılabilir."
-  player-not-found: "&cOyuncu bulunamadı: &f{player}"
-  unknown-subcommand: "&cBilinmeyen alt komut. &f/raikouhud help &ckullan."
+  no-permission: "<#ff4d4d>Bu komutu kullanma yetkin yok.</#ff4d4d>"
+  player-only: "<#ff4d4d>Bu komut sadece oyuncular icindir.</#ff4d4d>"
+  player-not-found: "<#ff4d4d>Oyuncu bulunamadi: <white>{player}</white></#ff4d4d>"
+  unknown-subcommand: "<#ff4d4d>Bilinmeyen alt komut. <gray><white>/raikouhud help</white> kullan.</gray>"
   help:
-    header: "&b&lRaikouHUD Komutları"
-    line-help: "&7- &f/raikouhud help &8| &7Bu listeyi gösterir"
-    line-reload: "&7- &f/raikouhud reload &8| &7Config ve dil dosyalarını yeniler"
-    line-status: "&7- &f/raikouhud status [oyuncu] &8| &7Modül durumlarını gösterir"
-    line-toggle: "&7- &f/raikouhud toggle <module> [oyuncu] &8| &7Oyuncu modülünü aç/kapat"
-    line-version: "&7- &f/raikouhud version &8| &7Plugin sürümünü gösterir"
+    header: "<red><bold>RaikouHUD</bold></red> <gray>Komutlari</gray>"
+    line-help: "<gray>- <white>/raikouhud help</white> <dark_gray>|</dark_gray> komutlari gosterir</gray>"
+    line-reload: "<gray>- <white>/raikouhud reload</white> <dark_gray>|</dark_gray> config ve dili yeniler</gray>"
+    line-status: "<gray>- <white>/raikouhud status [oyuncu]</white> <dark_gray>|</dark_gray> modul durumunu gosterir</gray>"
+    line-toggle: "<gray>- <white>/raikouhud toggle <module> [oyuncu]</white> <dark_gray>|</dark_gray> oyuncu modulunu ac/kapat</gray>"
+    line-version: "<gray>- <white>/raikouhud version</white> <dark_gray>|</dark_gray> surumu gosterir</gray>"
   reload:
-    success: "&aYapılandırma ve modüller başarıyla yenilendi."
-    failed: "&cYenileme başarısız. Konsol loglarını kontrol et."
+    success: "<#ff6b6b>Yenileme tamamlandi.</#ff6b6b>"
+    failed: "<#ff4d4d>Yenileme basarisiz. Konsolu kontrol et.</#ff4d4d>"
   status:
-    header: "&bDurum &8| &7Dil: &f{locale}"
-    module-line: "&7- {module}: {state}"
-    player-line: "&8  -> &f{player} &8/ &7{module}: {state}"
+    header: "<red>Durum</red> <dark_gray>|</dark_gray> <gray>Dil <white>{locale}</white></gray>"
+    module-line: "<gray>- {module}: {state}</gray>"
+    player-line: "<dark_gray>  > </dark_gray><white>{player}</white> <dark_gray>|</dark_gray> <gray>{module}: {state}</gray>"
   toggle:
-    usage: "&cKullanım: &f/raikouhud toggle <scoreboard|bossbar|actionbar|tab> [oyuncu]"
-    unknown-module: "&cBilinmeyen modül: &f{module}"
-    target-required: "&cKonsol için hedef oyuncu zorunlu."
-    success: "&f{player} &aiçin {module} durumu: {state}&a."
-  version: "&7Çalışan sürüm: &bRaikouHUD &fv{version}"
+    usage: "<#ff4d4d>Kullanim: <white>/raikouhud toggle <scoreboard|bossbar|actionbar|tab> [oyuncu]</white>"
+    unknown-module: "<#ff4d4d>Bilinmeyen modul: <white>{module}</white>"
+    target-required: "<#ff4d4d>Konsol icin hedef oyuncu zorunlu."
+    success: "<white>{player}</white><gray> icin </gray><#ff6b6b>{module}</#ff6b6b><gray> durumu: </gray>{state}<gray>.</gray>"
+  version: "<gray>RaikouHUD <white>v{version}</white></gray>"
 
 state:
-  enabled: "&aaçık"
-  disabled: "&ckapalı"
+  enabled: "<#ff8a8a>acik</#ff8a8a>"
+  disabled: "<#c63f3f>kapali</#c63f3f>"
 
 module:
   scoreboard: "Scoreboard"
   bossbar: "BossBar"
   actionbar: "ActionBar"
   tab: "TAB"
-

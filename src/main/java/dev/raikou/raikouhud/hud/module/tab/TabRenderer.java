@@ -1,7 +1,7 @@
 package dev.raikou.raikouhud.hud.module.tab;
 
+import dev.raikou.raikouhud.util.MiniMessageSupport;
 import java.util.List;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.entity.Player;
 
 public final class TabRenderer {
@@ -16,8 +16,7 @@ public final class TabRenderer {
         player.setPlayerListHeaderFooter("", "");
     }
 
-    private String joinAndColorize(List<String> lines) {
-        return ChatColor.translateAlternateColorCodes('&', String.join("\n", lines));
+    private String joinAndColorize(List<String> miniMessageLines) {
+        return MiniMessageSupport.toLegacySection(String.join("\n", miniMessageLines));
     }
 }
-

@@ -1,7 +1,7 @@
 package dev.raikou.raikouhud.hud.module.bossbar;
 
 import dev.raikou.raikouhud.config.model.module.BossbarConfig;
-import net.md_5.bungee.api.ChatColor;
+import dev.raikou.raikouhud.util.MiniMessageSupport;
 import org.bukkit.Bukkit;
 import org.bukkit.boss.BossBar;
 
@@ -23,7 +23,6 @@ public final class BossbarRenderer {
     }
 
     private String colorize(String value) {
-        return ChatColor.translateAlternateColorCodes('&', value == null ? "" : value);
+        return MiniMessageSupport.toLegacySection(value);
     }
 }
-

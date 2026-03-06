@@ -4,10 +4,9 @@ scoreboard:
   takeover-mode: SOFT
   permission: ""
   disabled-worlds: []
-  title: "&b&lRaikouHUD"
+  title: "<aqua><bold>RaikouHUD</bold></aqua>"
   lines:
-    - "&7Player: &f%player_name%"
-    - "&7Ping: &a%player_ping%ms"
-    - "&7World: &b%player_world%"
-    - "&7Online: &e%server_online%"
-
+    - "<gray>Player: <white>%player_name%</white></gray>"
+    - "<gray>Ping: <green>%player_ping%ms</green></gray>"
+    - "<gray>World: <aqua>%player_world%</aqua></gray>"
+    - "<gray>Online: <yellow>%server_online%</yellow></gray>"
